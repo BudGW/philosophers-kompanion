@@ -3,6 +3,8 @@ FROM java:8
 COPY . /usr/local/kompanion/
 WORKDIR /usr/local/kompanion
 
-EXPOSE 9090
+ENV PORT=9090
+
+EXPOSE $PORT
 
 ENTRYPOINT ./gradlew run

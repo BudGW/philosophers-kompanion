@@ -20,7 +20,7 @@ class MainVerticle : AbstractVerticle() {
 
     override fun start(startFuture: Future<Void>) {
         val router = createRouter()
-        val httpPort = System.getenv("PORT")?.toInt() ?: 8080
+        val httpPort = System.getenv("PORT")?.toInt() ?: 9090
 
         vertx.createHttpServer()
                 .requestHandler { router.accept(it) }
